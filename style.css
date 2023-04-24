@@ -11,9 +11,11 @@ body
     min-height: 100vh;
     display: flex;
     align-items: center;
+
     justify-content: center;
     background-color: whitesmoke;
     background-image: url('https://img.freepik.com/free-photo/abstract-background-futuristic-pedestal-product-presentation_35913-2415.jpg');
+    background-size: cover;
 }
 .box-shadow
 {
