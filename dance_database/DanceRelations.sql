@@ -1,4 +1,5 @@
 delete from locations;
+delete from managers;
 
 insert into locations values(1,'Mumbai');
 insert into locations values(2,'Jammu');
@@ -8,6 +9,26 @@ insert into locations values(5,'Chennai');
 insert into locations values(6,'Hyderabad');
 insert into locations values(7,'Ahmedabad');
 insert into locations values(8,'Pune');
-insert into locations values(9,'Surat');
-insert into locations values(10,'Jaipur');
-insert into locations values(11,'Kolkata');
+
+insert into managers values(12,'Vishal','Vishal@gmail.com',98765789);
+insert into managers values(23,'John','John@gmail.com',787563843);
+insert into managers values(24,'Anuj','Anuj@gmail.com',6783848347);
+insert into managers values(89,'Aman','Aman@gmail.com',765838392);
+insert into managers values(67,'Aman','Aman@gmail.com',65372329239);
+insert into managers values(99,'Abhi','Abhi@gmail.com',908348238243);
+insert into managers values(100,'Crick','Crick@gmail.com',85769493495);
+insert into managers values(101,'Crick','Crick78@gmail.com',8974638473);
+insert into managers values(111,'Srinivasa','Srinivasa12@gmail.com',98877673848);
+insert into managers values(145,'Srinivasa','Srinivasa45@gmail.com',63746283724);
+insert into managers values(87,'Sushant','Sushant90@gmail.com',98756384384);
+insert into managers values(211,'Salman','Salman43@gmail.com',9893748372);
+insert into managers values(212,'Raghav','Raghav09@gmail.com',98934728732);
+insert into managers values(112,'Remo','Remo31@outlook.com',95463216546);
+insert into managers values(114,'Kapil','Kapil45@email.com',984651345635);
+insert into managers values(110,'Siddhanth','Siddhanth12@gmail.com',9456313545);
+insert into managers values(311,'Sandeep','Sandeep67@gmail.com',98736452323);
+insert into managers values(312,'Sumit','Sumit1234@outlook.com',946513215465);
+insert into managers values(412,'Krish','Krish785@outlook.com',9012487651354);
+insert into managers values(123,'Vaibhav','Vaibhav456@outlook.com',79874564213);
+insert into managers values(200,'Viraj','Viraj@gmail.com',90123154654);
+insert into managers values(900,'Sanatan','Sanatan8876@gmail.com',956415468887);
