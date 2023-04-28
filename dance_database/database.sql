@@ -33,9 +33,7 @@ CREATE TABLE dance_academies (
 
 CREATE TABLE dance_styles (
   id INT PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  academy_id INT,
-  FOREIGN KEY (academy_id) REFERENCES dance_academies(id) on delete cascade
+  name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE artists (
