@@ -1,5 +1,10 @@
 delete from locations;
 delete from managers;
+delete from dance_academies;
+delete from dance_styles;
+delete from artists;
+delete from participants;
+delete from payments;
 
 insert into locations values(1,'Mumbai');
 insert into locations values(2,'Jammu');
@@ -7,7 +12,6 @@ insert into locations values(3,'Bangalore');
 insert into locations values(4,'Delhi');
 insert into locations values(5,'Chennai');
 insert into locations values(6,'Hyderabad');
-insert into locations values(7,'Ahmedabad');
 insert into locations values(8,'Pune');
 
 insert into managers values(12,'Vishal','Vishal@gmail.com',98765789);
@@ -31,4 +35,76 @@ insert into managers values(312,'Sumit','Sumit1234@outlook.com',946513215465);
 insert into managers values(412,'Krish','Krish785@outlook.com',9012487651354);
 insert into managers values(123,'Vaibhav','Vaibhav456@outlook.com',79874564213);
 insert into managers values(200,'Viraj','Viraj@gmail.com',90123154654);
-insert into managers values(900,'Sanatan','Sanatan8876@gmail.com',956415468887);
+
+insert into dance_academies values(123,'OM-Dance_Academy',1,12);
+insert into dance_academies values(1234,'YO-Dance_Academy',1,23);
+insert into dance_academies values(321,'Hitok-Dance_Academy',1,24);
+insert into dance_academies values(231,'Artistic-Dance_Academy',2,89);
+insert into dance_academies values(312,'Shakti-Dance_Academy',2,67);
+insert into dance_academies values(513,'Nritya-Dance_Academy',2,99);
+insert into dance_academies values(135,'Natraj-Dance_Academy',3,100);
+insert into dance_academies values(153,'Kings-Dance_Academy',3,101);
+insert into dance_academies values(315,'Uttam-Dance_Academy',3,111);
+insert into dance_academies values(678,'Big-Dance_Center',4,145);
+insert into dance_academies values(876,'Himan-Dance_Crew',4,87);
+insert into dance_academies values(786,'Terence-Dance_School',4,211);
+insert into dance_academies values(768,'Raghav-Dance_Academy',5,212);
+insert into dance_academies values(900,'Remo-Dance_School',5,112);
+insert into dance_academies values(901,'Sirius-Dance_World',6,114);
+insert into dance_academies values(902,'Hip-Hoppers',6,110);
+insert into dance_academies values(903,'Om-Dance_studio',6,311);
+insert into dance_academies values(904,'Sirius_Dance_world',8,312);
+insert into dance_academies values(913,'Tap-Tap-Dance_studio',8,412);
+insert into dance_academies values(915,'Haardik-Dance_studio',8,123);
+insert into dance_academies values(955,'Swastik-Dance_studio',8,200);
+
+
+insert into dance_styles values(8764,'HIP-HOP');
+insert into dance_styles values(2334,'Contemporary');
+insert into dance_styles values(9083,'Classical');
+
+insert into artists values(2211,'Piyush_Bhagat',8764);
+insert into artists values(2334,'Himanshu_Dulani',8764);
+insert into artists values(3221,'Poppin_John',8764);
+insert into artists values(1223,'Dytto',8764);
+insert into artists values(9008,'Sushant_Khatri',8764);
+insert into artists values(9090,'Terence_Lewis',2334);
+insert into artists values(9091,'Samarpan_Lama',2334);
+insert into artists values(9099,'Haardik_Rawat',2334);
+insert into artists values(9000,'Pankaj',2334);
+insert into artists values(8000,'Shivanshu',9083);
+insert into artists values(8001,'Nritiya-kala',9083);
+insert into artists values(8002,'Shweta_Warrier',9083);
+
+INSERT INTO participants VALUES(1, 'John Smith', 'johnsmith@example.com', '555-1234', 8764, 2211);
+INSERT INTO participants VALUES(2, 'Emily Davis', 'emilydavis@example.com', '555-5678', 2334, 9091);
+INSERT INTO participants VALUES(3, 'Michael Johnson', 'michaeljohnson@example.com', '555-9012', 9083, 8002);
+INSERT INTO participants VALUES(4, 'Sarah Brown', 'sarahbrown@example.com', '555-3456', 8764, 9008);
+INSERT INTO participants VALUES(5, 'David Lee', 'davidlee@example.com', '555-7890', 2334, 3221);
+INSERT INTO participants VALUES(6, 'Jessica Kim', 'jessicakim@example.com', '555-2345', 9083, 8000);
+INSERT INTO participants VALUES(7, 'Matthew Chen', 'matthewchen@example.com', '555-6789', 8764, 2334);
+INSERT INTO participants VALUES(8, 'Ashley Park', 'ashleypark@example.com', '555-0123', 2334, 9099);
+INSERT INTO participants VALUES(9, 'William Kim', 'williamkim@example.com', '555-4567', 9083, 9000);
+INSERT INTO participants VALUES(10, 'Jennifer Lee', 'jenniferlee@example.com', '555-8901', 8764, 2334);
+INSERT INTO participants VALUES(11, 'Christopher Davis', 'christopherdavis@example.com', '555-1234', 8764, 1223);
+INSERT INTO participants VALUES(12, 'Amanda Johnson', 'amandajohnson@example.com', '555-5678', 2334, 9090);
+INSERT INTO participants VALUES(13, 'Daniel Brown', 'danielbrown@example.com', '555-9012', 9083, 8001);
+INSERT INTO participants VALUES(14, 'Lauren Lee', 'laurenlee@example.com', '555-3456', 8764, 2334);
+INSERT INTO participants VALUES(15, 'Andrew Kim', 'andrewkim@example.com', '555-7890', 2334, 3221);
+
+
+INSERT INTO payments VALUES(1, 1, 50.00, TO_DATE('2023-04-01', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(2, 2, 75.00, TO_DATE('2023-04-03', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(3, 3, 100.00, TO_DATE('2023-04-05', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(4, 4, 125.00, TO_DATE('2023-04-07', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(5, 5, 150.00, TO_DATE('2023-04-09', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(6, 6, 175.00, TO_DATE('2023-04-11', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(7, 7, 200.00, TO_DATE('2023-04-13', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(8, 8, 225.00, TO_DATE('2023-04-15', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(9, 9, 250.00, TO_DATE('2023-04-17', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(10, 10, 275.00, TO_DATE('2023-04-19', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(11, 11, 300.00, TO_DATE('2023-04-21', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(12, 12, 325.00, TO_DATE('2023-04-23', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(13, 13, 350.00, TO_DATE('2023-04-25', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(14, 14, 375.00, TO_DATE('2023-04-27', 'YYYY-MM-DD'));
+INSERT INTO payments VALUES(15, 15, 400.00, TO_DATE('2023-04-29', 'YYYY-MM-DD'));
