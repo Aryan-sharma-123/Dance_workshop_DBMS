@@ -1,0 +1,59 @@
+q1) Retrieve all dance academies with their respective locations and managers:
+
+SELECT dance_academies.id, dance_academies.name, locations.name AS location, managers.name AS manager
+FROM dance_academies
+JOIN locations ON dance_academies.location_id = locations.id
+JOIN managers ON dance_academies.manager_id = managers.id;
+
+q2) Retrieve all artists with their respective dance styles:
+vbnet
+
+SELECT artists.id, artists.name, dance_styles.name AS style
+FROM artists
+JOIN dance_styles ON artists.style_id = dance_styles.id;
+
+q3) Retrieve all participants with their respective dance styles and artists:
+
+SELECT participants.id, participants.name, dance_styles.name AS style, artists.name AS artist
+FROM participants
+JOIN dance_styles ON participants.style_id = dance_styles.id
+JOIN artists ON participants.artist_id = artists.id;
+
+
+q4) Retrieve the total amount paid by each participant:
+
+SELECT participant_id, SUM(amount) AS total_amount
+FROM payments
+GROUP BY participant_id;
+
+q5) Retrieve the total amount paid by each participant along with their names
+
+SELECT participants.name, SUM(amount) AS total_amount
+FROM payments
+JOIN participants ON payments.participant_id = participants.id
+GROUP BY participant_id;
+
+q6) Retrieve the names of all managers who manage dance academies located in Mumbai:
+
+
+SELECT DISTINCT managers.name
+FROM dance_academies
+JOIN locations ON dance_academies.location_id = locations.id
+JOIN managers ON dance_academies.manager_id = managers.id
+WHERE locations.name = 'Mumbai';
+
+
+
+q7) Retrieve the names of all participants who have not made a payment
+
+SELECT participants.name
+FROM participants
+LEFT JOIN payments ON participants.id = payments.participant_id
+WHERE payments.id IS NULL;
+
+q8) Retrieve the names of all artists who have never been associated with a participant:
+
+SELECT artists.name
+FROM artists
+LEFT JOIN participants ON artists.id = participants.artist_id
+WHERE participants.id IS NULL;
