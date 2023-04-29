@@ -57,3 +57,27 @@ SELECT artists.name
 FROM artists
 LEFT JOIN participants ON artists.id = participants.artist_id
 WHERE participants.id IS NULL;
+
+
+q9) insert payment in the payment table once the participant made it using triggers
+
+
+CREATE OR REPLACE TRIGGER insert1_payment
+AFTER INSERT ON participants
+FOR EACH ROW
+DECLARE
+  v_payment_id payments.id%TYPE;
+BEGIN
+  INSERT INTO payments (participant_id, amount, payment_date)
+  VALUES (:NEW.id, 0, SYSDATE);
+  
+  SELECT id INTO v_payment_id
+  FROM payments
+  WHERE participant_id = :NEW.id AND payment_date = SYSDATE;
+  
+  DBMS_OUTPUT.PUT_LINE('Payment added. Payment ID: ' || v_payment_id);
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error adding payment: ' || SQLERRM);
+END;
+/
