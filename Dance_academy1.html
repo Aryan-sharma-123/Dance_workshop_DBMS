@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    nav
+    {
+        display: flex;
+			flex-direction: row;
+			justify-content: space-between space-between;
+			align-items: center;
+			margin-top: 20px;
+			padding: 10px 20%;
+        background-color: rgb(12, 12, 12);
+        border-radius: auto;
+        border-radius: 26px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        margin-right: 200px;
+    }
+
+    nav a:hover {
+        color: red;
+    }
+
+    #hip-hop
+    {
+        width:100%;
+        height: 160px;
+    }
+    #contemporary
+    {
+        height: 200px;
+    }
+    #classical
+    {
+        height: 200px;
+    }
+</style>
+<body class="backdancehtml2"> 
+    <div>
+    <div>
+        <nav>
+            <a href="Dance_academy1.html">Home</a>
+            <a href="about.html">About </a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-4  py-3 py-sm-0">
+                <div class="card">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgrOWAmfjrMNk9j1MaDV3o39TJaENXS4OI_A&usqp=CAU" id=classical alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">BIG dance center</h5>
+                      <a href="dance.html" class="btn btn-primary">Dance_styles</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-sm-4 py-3 py-sm-0">
+                <div class="card" >
+                    <img class="card-img-top" id=Contemporary src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Op6eHdI9dSm9Dw5tW9mH47fruuB3_FiOmQ&usqp=CAU" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Artistic Dance academy</h5>
+                      <a href="dance.html" class="btn btn-primary">Dance_styles</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-sm-4  py-3 py-sm-0">
+                <div class="card">
+                    <img class="card-img-top" id="hip-hop" src="data:image/png;base64,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" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Piyush Dance academy</h5>
+                      <a href="dance.html" class="btn btn-primary">Dance_styles</a>
+                    </div>
+                  </div>
+            </div>
+            
+
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+</body>
+</html>
