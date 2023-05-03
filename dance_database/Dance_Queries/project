@@ -81,3 +81,15 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('Error adding payment: ' || SQLERRM);
 END;
 /
+
+q10) Trigger to automatically update the dance_academies table when a manager is deleted:
+
+CREATE OR REPLACE TRIGGER delete_manager_trigger
+AFTER DELETE ON managers
+FOR EACH ROW
+BEGIN
+  UPDATE dance_academies
+  SET manager_id = NULL
+  WHERE manager_id = :OLD.id;
+END;
+/
