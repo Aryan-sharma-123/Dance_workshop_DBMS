@@ -93,3 +93,14 @@ BEGIN
   WHERE manager_id = :OLD.id;
 END;
 /
+q11) Trigger to enforce a constraint on the payments table
+
+CREATE OR REPLACE TRIGGER payment_amount_trigger
+BEFORE INSERT OR UPDATE ON payments
+FOR EACH ROW
+BEGIN
+  IF :NEW.amount < 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Payment amount must be non-negative.');
+  END IF;
+END;
+/
